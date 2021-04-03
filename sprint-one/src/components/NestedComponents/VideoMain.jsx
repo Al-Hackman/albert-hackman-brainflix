@@ -2,16 +2,21 @@ import React, { Component } from 'react';
 import Details from './Details';
 import Hero from './Hero';
 import videoList from '../../assets/data/videos.json';
+import videoDetail from '../../assets/data/video-details.json';
 import './videoMain.scss';
 
 class VideoMain extends Component {
     state={
-        videoID: videoList[0].id
+        videoID: videoList[0].id,
+        selectedVideo: videoList[0],
+        videoListWithoutDefault: videoList.slice(1)
     }
-    changeVideo = (event, id) =>{
+    changeVideo = (id) =>{
         console.log('vid ID', id)
-        this.setState({videoID:id})
-        return id
+        let video = videoDetail.find(vid => vid.id === id)
+        this.setState({videoID: video.id})
+        this.setState({selectedVideo: video})
+        return video
     }
     render() {
         console.log({videoList})
@@ -19,20 +24,22 @@ class VideoMain extends Component {
             <div>
                 {/* main container */}
                 <div className="hero">
-                    <Hero name="videoID"/>
+                    <Hero thisVideo={this.state.selectedVideo}/>
                 </div>
                 <div className="deatils-video-wrap">
                     <div className="details">
-                        <Details videoID={this.state.videoID} handleClick={this.changeVideo} />
+                        <Details thisVideo={this.state.selectedVideo} />
                     </div>
                     <div className="videos">
                         {/* video list */}
                         {/* <span onClick={event=>this.changeVideo(event,videoList[2].id)}> */}
-                        {videoList.map(video => <div onClick={event=>this.changeVideo(event,video.id)}>
-                            <img src={video.image} alt=""/>
-                            
-                            </div>)}
-                        {/* {students.map(student => <li>{student}</li>)} */}
+                        {this.state.videoListWithoutDefault.map(video => <div className="video" key={video.id} onClick={event=>this.changeVideo(video.id)}>
+                            <img className="video__img" src={video.image} alt="Videos"/>
+                            <div className="video__description">
+                                <p className="video__title">{video.title}</p>
+                                <p className="video__channel">{video.channel}</p>
+                            </div>
+                        </div>)}
                         {/* </span> */}
                     </div>
                 </div>

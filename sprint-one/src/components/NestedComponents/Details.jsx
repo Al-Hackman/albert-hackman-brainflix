@@ -5,24 +5,24 @@ import VideoMain from '../NestedComponents/VideoMain';
 
 class Details extends React.Component {
     state = {
-        selectedVideo: videoDetails[0]
+        // selectedVideo: videoDetails[0]
     }
     // video = this.LoadVideo(this.props.videoID)
     // newState = ()=>{
     //     this.setState({selectedVideo: LoadVideo(this.props.videoID)})
     // }/
-     LoadVideo = (event) => {
-        console.log('running...')
-        let thisVideo = videoDetails.find(video => video.id === this.props.videoID)
-        this.setState({selectedVideo: thisVideo});
-        console.log(this.state.selectedVideo)
-  }
+//      LoadVideo = (event) => {
+//         console.log('running...')
+//         let thisVideo = videoDetails.find(video => video.id === this.props.videoID)
+//         this.setState({selectedVideo: thisVideo});
+//         console.log(this.state.selectedVideo)
+//   }
     // let videoID = {this.props.videoID};
     
     render(props, event){
-        console.log('videoID = ', this.props.videoID,)
-        console.log('handleClick = ', this.props.handleClick,)
-        console.log('event from main = ', event)
+        console.log('videoID = ', this.props.thisVideo.id,)
+        // console.log('handleClick = ', this.props.handleClick,)
+        // console.log('event from main = ', event)
         
         // this.newState()
         // this.LoadVideo(this.props.videoID)
@@ -41,9 +41,10 @@ class Details extends React.Component {
             // this.LoadVideo(this.props.videoID);
             <div className="details">
         {/* selectedVideo: videoDetails[0] */}
-                <h1>{this.state.selectedVideo.title} </h1>
-                <h5>{this.state.selectedVideo.channel}</h5>
-                <p>{this.state.selectedVideo.description}</p>
+                <h1>{this.props.thisVideo.title} </h1>
+                <span>{this.props.thisVideo.channel}</span>
+                <span>{this.props.thisVideo.timestamp}</span>
+                <p>{this.props.thisVideo.description}</p>
             </div>
         );
     }

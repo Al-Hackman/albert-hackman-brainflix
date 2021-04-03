@@ -4,3 +4,34 @@
 .hero video{
     height: 183px;
 }
+
+
+.videos{
+    margin: 2.5rem 1rem;
+
+}
+.video{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+    &__img{
+        width: 120px;
+        height: 100%;
+        border-radius: 4px;
+    }
+    &__description{
+        width: 55%;
+    }
+
+
+
+
+
+
+
+
+
+}
