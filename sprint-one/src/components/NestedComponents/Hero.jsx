@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import videoDetails from '../../assets/data/video-details.json';
+import './hero.scss'
 
 class Hero extends Component {
     
@@ -7,9 +8,7 @@ class Hero extends Component {
         console.log('this video',this.props.thisVideo.image);
         return (
             <div className="hero">
-                <video controls poster={this.props.thisVideo.image}>
-                    {/* <source src={videoDetails[0].video} type="video/mp4"></source> */}
-                </video>
+                <video className="hero__video" controls poster={this.props.thisVideo.image}></video>
             </div>
         )
     }

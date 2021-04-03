@@ -1,9 +1,12 @@
-.hero{
-    height: 183px;
-}
-.hero video{
-    height: 183px;
-}
+@use '../../partials/mixins' as *;
+
+
+// .hero{
+//     height: 183px;
+// }
+// .hero video{
+//     height: 183px;
+// }
 
 
 .videos{
@@ -12,7 +15,7 @@
 }
 .video{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: 70px;
     width: 100%;
     margin-bottom: 1.5rem;
@@ -23,7 +26,27 @@
         border-radius: 4px;
     }
     &__description{
-        width: 55%;
+        width: 50%;
+        text-align: left;
+        margin-left: 16px;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: flex-start;
+        // align-items:flex-start;
+    }
+    &__title{
+        margin: 0px 0px 1rem;
+        @include paragraph;
+        font-weight: bold;
+        height: 40px;
+        // word-wrap: normal;
+        overflow: hidden;
+        white-space:pre-line;
+        text-overflow: ellipsis;
+    }
+    &__channel{
+        margin: 0px;
+        @include paragraph;
     }
 
 

@@ -1,0 +1,13 @@
+@use '../../partials/mixins' as *;
+
+.details{
+    margin: 2rem 1rem 2.5rem;
+
+    &__title{
+        text-align: left;
+        @include lower-header;
+    }
+    
+
+
+}
