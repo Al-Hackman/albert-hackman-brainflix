@@ -58,13 +58,20 @@ class Details extends React.Component {
                 <p className="details__description">{this.props.thisVideo.description}</p>
                 <h4 className="details__comment">3 Comments</h4>
                 <h4 className="details__comment-heading">JOIN THE CONVERSATION</h4>
-                <div>
+                <div className="details__add-comment-wrap">
                     <img src={img} className="details__add-comment-img" alt="Add-Comment Photo"/>
                     <div className="details__add-comment">
-                        <textarea name="" id="details__input"></textarea>
+                        <textarea name="input" className="details__input" placeholder="That was easily the most spectacular BMX moment ever."></textarea>
                         <button className="details__button">COMMENT</button>
                     </div>
                 </div>
+                {this.props.thisVideo.comments.map(com=> <div className="details__comment-wrap" key={videoDetails.id}> 
+                    <div className="details__comment-img"></div>
+                    <div className="details__saved-comment">
+                        <span className="details__comment-name">{com.name}</span><span className="details__comment-date">{com.timestamp}</span>
+                        <p className="details__info">{com.comment}</p>
+                    </div>
+                </div>)}
             </div>
         );
     }

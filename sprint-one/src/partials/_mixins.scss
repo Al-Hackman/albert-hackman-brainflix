@@ -54,3 +54,10 @@
     line-height: 1.125rem;
     font-weight: 400;
 }
+
+
+@mixin img-wrap {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}

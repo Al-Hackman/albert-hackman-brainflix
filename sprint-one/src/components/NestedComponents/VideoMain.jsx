@@ -8,7 +8,7 @@ import './videoMain.scss';
 class VideoMain extends Component {
     state={
         videoID: videoList[0].id,
-        selectedVideo: videoList[0],
+        selectedVideo: videoDetail[0],
         videoListWithoutDefault: videoList.slice(1)
     }
     changeVideo = (id) =>{
@@ -23,11 +23,11 @@ class VideoMain extends Component {
         return (
             <div>
                 {/* main container */}
-                <div className="hero">
+                <div className="hero-section">
                     <Hero thisVideo={this.state.selectedVideo}/>
                 </div>
-                <div className="deatils-video-wrap">
-                    <div className="details">
+                <div className="details-video-wrap">
+                    <div className="details-section">
                         <Details thisVideo={this.state.selectedVideo} />
                     </div>
                     <div className="videos">
