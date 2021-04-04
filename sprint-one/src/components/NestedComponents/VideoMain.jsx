@@ -31,6 +31,7 @@ class VideoMain extends Component {
                         <Details thisVideo={this.state.selectedVideo} />
                     </div>
                     <div className="videos">
+                        <p className="videos__title">NEXT VIDEO</p>
                         {/* video list */}
                         {/* <span onClick={event=>this.changeVideo(event,videoList[2].id)}> */}
                         {this.state.videoListWithoutDefault.map(video => <div className="video" key={video.id} onClick={event=>this.changeVideo(video.id)}>

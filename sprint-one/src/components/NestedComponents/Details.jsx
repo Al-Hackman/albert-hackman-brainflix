@@ -2,6 +2,8 @@ import React from 'react';
 import videoDetails from '../../assets/data/video-details.json';
 import VideoMain from '../NestedComponents/VideoMain';
 import img from '../../assets/images/Mohan-muruge.jpg';
+import views from '../../assets/icons/Icon-views.svg';
+import likes from '../../assets/icons/Icon-likes.svg';
 import './details.scss';
 
 
@@ -48,16 +50,17 @@ class Details extends React.Component {
                 <div className="details__wrap">
                     <div className="details__channel-date">
                         <span className="details__channel">By {this.props.thisVideo.channel}</span>
-                        <span className="details__date">{this.props.thisVideo.timestamp}</span>
+                        <span className="details__date">
+                        {new Date(this.props.thisVideo.timestamp).getMonth()+1}/{new Date(this.props.thisVideo.timestamp).getDate()}/{new Date(this.props.thisVideo.timestamp).getFullYear()}</span>
                     </div>
                     <div className="details__views-likes">
-                        <span className="details__views">{this.props.thisVideo.views}</span>
-                        <span className="details__likes">{this.props.thisVideo.likes}</span>
+                        <img className="details__icon" src={views} alt="Views From People"/><span className="details__views">{this.props.thisVideo.views}</span>
+                        <img className="details__icon" src={likes} alt="Likes From People"/><span className="details__likes">{this.props.thisVideo.likes}</span>
                     </div>
                 </div>
                 <p className="details__description">{this.props.thisVideo.description}</p>
-                <h4 className="details__comment">3 Comments</h4>
-                <h4 className="details__comment-heading">JOIN THE CONVERSATION</h4>
+                <p className="details__comment">3 Comments</p>
+                <p className="details__comment-heading">JOIN THE CONVERSATION</p>
                 <div className="details__add-comment-wrap">
                     <img src={img} className="details__add-comment-img" alt="Add-Comment Photo"/>
                     <div className="details__add-comment">
@@ -68,7 +71,10 @@ class Details extends React.Component {
                 {this.props.thisVideo.comments.map(com=> <div className="details__comment-wrap" key={videoDetails.id}> 
                     <div className="details__comment-img"></div>
                     <div className="details__saved-comment">
-                        <span className="details__comment-name">{com.name}</span><span className="details__comment-date">{com.timestamp}</span>
+                        <div className="details__name-date-wrap">
+                            <span className="details__comment-name">{com.name}</span>
+                            <span className="details__comment-date">{new Date(com.timestamp).getMonth()+1}/{new Date(com.timestamp).getDate()}/{new Date(com.timestamp).getFullYear()}</span>
+                        </div>
                         <p className="details__info">{com.comment}</p>
                     </div>
                 </div>)}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import videoDetails from '../../assets/data/video-details.json';
 import './hero.scss'
 
+
 class Hero extends Component {
     
     render(props) {

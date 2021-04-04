@@ -29,7 +29,14 @@
         
     }
     &__views{
-        margin-right: 6rem;
+        margin-right: 3rem;
+        padding-top: 4px;
+    }
+    &__likes{
+        padding-top: 4px;
+    }
+    &__icon{
+        margin-right: 0.5rem;
     }
     &__description{
         margin: 1.5rem 0px 2.5rem;
@@ -37,14 +44,15 @@
         text-align: left;
     }
     &__comment{
+        @include sub-header;
         text-align: left;
         margin: 0px;
     }
     &__comment-heading{
+        @include sub-header;
         color: $text-label;
         margin: 2rem 0px 0.3rem 4rem;
         text-align: left;
-
     }
     &__add-comment-wrap{
         display: flex;
@@ -102,10 +110,15 @@
         text-align: left;
         margin-left: 1rem;
     }
-    &__info{
+    &__name-date-wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__comment-name{
+        font-weight: bold; 
+    }
+       &__info{
         text-align: left;
     }
-
-
 
 }
