@@ -117,8 +117,59 @@
     &__comment-name{
         font-weight: bold; 
     }
+    &__comment-date{
+        color: $text-label;
+    }
        &__info{
         text-align: left;
+    }
+
+    @include tablet{
+        margin: 3rem 1.5rem 2.5rem;
+
+        &__title{
+            @include header;
+            margin:0px 0px 1.5rem;
+        }
+        &__wrap{
+            display: flex;
+            justify-content: space-between;
+        }
+        &__channel-date{
+            margin: 0px;
+        }
+        &__views{
+            margin-right: 1.5rem;
+        }
+        &__description{
+            margin: 2.5rem 0px 4rem;
+            font-size: 0.9rem;
+            line-height: 1.5rem;
+            width: 75%;
+        }
+        &__add-comment{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+        &__input{
+            width: 440px;
+            height: 48px;
+            margin-right: 1rem;
+        }
+        &__button{
+            margin: 0px;
+            width: 160px;
+        }
+        &__saved-comment{
+            width: 624px;
+        }
+        &__name-date-wrap{
+            justify-content: flex-start;
+        }
+        &__comment-name{
+            margin-right: 1rem;
+        }
     }
 
 }

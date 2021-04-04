@@ -68,7 +68,7 @@ class Details extends React.Component {
                         <button className="details__button">COMMENT</button>
                     </div>
                 </div>
-                {this.props.thisVideo.comments.map(com=> <div className="details__comment-wrap" key={videoDetails.id}> 
+                {this.props.thisVideo.comments.map(com=> <div className="details__comment-wrap" key={com.id}> 
                     <div className="details__comment-img"></div>
                     <div className="details__saved-comment">
                         <div className="details__name-date-wrap">
