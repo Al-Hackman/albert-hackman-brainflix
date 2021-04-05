@@ -19,4 +19,13 @@
             width: 91.2%;
         }
     }
+
+    @include desktop{
+        height: 540px;
+
+        &__video{
+            height: 100%;
+            width: 61%;
+        }
+    }
 }
