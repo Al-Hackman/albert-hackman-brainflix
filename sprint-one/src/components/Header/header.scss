@@ -52,6 +52,10 @@
         border: 0px;
         background-color: $cta-text-link-two;
         color: $secondary-background;
+        outline: none;
+    }
+    &__upload:hover{
+        background-color:$cta-hover-one;
     }
 
     @include tablet{

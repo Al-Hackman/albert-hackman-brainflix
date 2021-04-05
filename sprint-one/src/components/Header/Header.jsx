@@ -13,10 +13,9 @@ function Header() {
                 <img className="navbar__search-icon" src={search} alt="Search Icon"/>
                 <input type="text" className="navbar__search" placeholder="Search"/>
             </div>
-            {/* <SearchBar id="search-bar" type="text" placeholder="Search"></SearchBar> */}
             <div className="navbar__wrap">    
                 <button className="navbar__upload" ><img className="navbar__upload-icon" src={upload} alt="Upload Icon"/> UPLOAD</button>
-                <img src={img} className="navbar__image" alt="Image" />
+                <img src={img} className="navbar__image" alt="User" />
             </div>
         </div>
     )

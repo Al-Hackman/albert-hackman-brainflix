@@ -1,6 +1,4 @@
 import React from 'react';
-import videoDetails from '../../assets/data/video-details.json';
-import VideoMain from '../NestedComponents/VideoMain';
 import img from '../../assets/images/Mohan-muruge.jpg';
 import views from '../../assets/icons/Icon-views.svg';
 import likes from '../../assets/icons/Icon-likes.svg';
@@ -8,44 +6,11 @@ import './details.scss';
 
 
 class Details extends React.Component {
-    state = {
-        // selectedVideo: videoDetails[0]
-    }
-    // video = this.LoadVideo(this.props.videoID)
-    // newState = ()=>{
-    //     this.setState({selectedVideo: LoadVideo(this.props.videoID)})
-    // }/
-//      LoadVideo = (event) => {
-//         console.log('running...')
-//         let thisVideo = videoDetails.find(video => video.id === this.props.videoID)
-//         this.setState({selectedVideo: thisVideo});
-//         console.log(this.state.selectedVideo)
-//   }
-    // let videoID = {this.props.videoID};
-    
+
     render(props, event){
-        console.log('videoID = ', this.props.thisVideo.id,)
-        console.log('videoID = ', videoDetails)
-        // console.log('handleClick = ', this.props.handleClick,)
-        // console.log('event from main = ', event)
-        
-        // this.newState()
-        // this.LoadVideo(this.props.videoID)
-        // setTimeout(()=>{
-        //     this.LoadVideo()
-        // },1000)
-        // this.LoadVideo();
-        // LoadVideo=()=>{
-        // console.log('running...')
-        // let thisVideo = videoDetails.find(video => video.id === this.props.videoID)
-        // this.setState({selectedVideo: thisVideo});
-        // console.log(this.state.selectedVideo)
-        // }
+               
         return (
-            // this.LoadVideo()
-            // this.LoadVideo(this.props.videoID);
             <div className="details">
-        {/* selectedVideo: videoDetails[0] */}
                 <h1 className="details__title">{this.props.thisVideo.title} </h1>
                 <div className="details__wrap">
                     <div className="details__channel-date">
@@ -62,9 +27,9 @@ class Details extends React.Component {
                 <p className="details__comment">3 Comments</p>
                 <p className="details__comment-heading">JOIN THE CONVERSATION</p>
                 <div className="details__add-comment-wrap">
-                    <img src={img} className="details__add-comment-img" alt="Add-Comment Photo"/>
+                    <img src={img} className="details__add-comment-img" alt="Add-Comment User"/>
                     <div className="details__add-comment">
-                        <textarea name="input" className="details__input" placeholder="That was easily the most spectacular BMX moment ever."></textarea>
+                        <textarea name="input" className="details__input" placeholder="Add a comment"></textarea>
                         <button className="details__button">COMMENT</button>
                     </div>
                 </div>
@@ -83,12 +48,6 @@ class Details extends React.Component {
     }
 }
 
-// function LoadVideo(id) {
-//     // get the selected video and pass to state's seletedVideo
-//     let thisVideo = videoDetails.find(video => video.id === id)
-//     this.setState({})
-//     return thisVideo
-// }
 
     
 export default Details;

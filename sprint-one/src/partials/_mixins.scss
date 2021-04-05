@@ -19,11 +19,6 @@
 }
 
 // Mixins for various font sizes.
-@mixin hero-header {
-    font-size: 3.75rem;
-    line-height: 4.25rem;   
-    font-weight: 700;
-}
 @mixin header {
     font-size: 2.25rem;
     line-height: 2.75rem;
@@ -43,21 +38,4 @@
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: 400;
-}
-@mixin mob-sub-header {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-weight: 500;
-}
-@mixin mob-paragraph {
-    font-size: 0.812rem;
-    line-height: 1.125rem;
-    font-weight: 400;
-}
-
-
-@mixin img-wrap {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
 }
