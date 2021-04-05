@@ -194,4 +194,10 @@
         }
     }
 
+        @include desktop-1440{
+            // width: 712px;
+            &__input{
+                width: 67.3%;
+            }
+        }
 }

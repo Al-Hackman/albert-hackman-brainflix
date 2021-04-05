@@ -28,4 +28,10 @@
             width: 61%;
         }
     }
+
+    @include desktop-1440{
+        &__video{
+            width: 65.56%;
+        }
+    }
 }

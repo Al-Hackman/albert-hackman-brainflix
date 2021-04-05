@@ -11,7 +11,11 @@
     }
 }
 
-
+.details-section{
+    @include desktop-1440{
+        width: 86%;
+    }
+}
 
 
 .videos{
