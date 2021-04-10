@@ -4,6 +4,7 @@ import Hero from '../Hero/Hero';
 import VideoList from '../VideoList/VideoList';
 import './videoMain.scss';
 import axios from "axios";
+import CommentDetails from '../CommentDetails/CommentDetails';
 
 class VideoMain extends Component {
     state={
@@ -90,17 +91,18 @@ class VideoMain extends Component {
     }
        
         return (
-            <div>
-                <div className="hero-section">
+            <>
+                <section className="hero-section">
                     <Hero thisVideo={this.state.selectedVideo}/>
-                </div>
-                <div className="details-video-wrap">
+                </section>
+                <section className="details-video-wrap">
                     <div className="details-section">
                         <VideoDetails thisVideo={this.state.selectedVideo} />
+                        <CommentDetails thisVideo={this.state.selectedVideo} />
                     </div>
                     <VideoList videos={this.state.videos} />
-                </div>
-            </div>
+                </section>
+            </>
         )
     }
 }

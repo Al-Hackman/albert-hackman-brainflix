@@ -20,3 +20,19 @@
         width: 86%;
     }
 }
+
+.videos{
+    margin: 2.5rem 1rem 0px;
+    &__title{
+        @include sub-header;
+        color: $text-label;
+        margin: 2.5rem 0px;
+        text-align: left;
+    }
+    @include tablet{
+        margin: 2.5rem 1.5rem 0px;
+    }
+    @include desktop{
+        margin: 0px 0px 0px 1rem;
+    }
+}

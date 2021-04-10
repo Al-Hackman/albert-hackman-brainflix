@@ -1,5 +1,4 @@
 import React from 'react';
-import img from '../../assets/images/Mohan-muruge.jpg';
 import views from '../../assets/icons/Icon-views.svg';
 import likes from '../../assets/icons/Icon-likes.svg';
 import './videoDetails.scss';
@@ -59,8 +58,8 @@ function VideoDetails(props) {
                     </div>
                 </div>
                 <p className="details__description">{props.thisVideo.description}</p>
-                <p className="details__comment">3 Comments</p>
-                <p className="details__comment-heading">JOIN THE CONVERSATION</p>
+                {/* <p className="details__comment">3 Comments</p>
+                <label className="details__comment-heading">JOIN THE CONVERSATION</label>
                 <div className="details__add-comment-wrap">
                     <img src={img} className="details__add-comment-img" alt="Add-Comment User"/>
                     <div className="details__add-comment">
@@ -77,7 +76,7 @@ function VideoDetails(props) {
                         </div>
                         <p className="details__info">{com.comment}</p>
                     </div>
-                </div>)}
+                </div>)} */}
             </div>
         );
     
