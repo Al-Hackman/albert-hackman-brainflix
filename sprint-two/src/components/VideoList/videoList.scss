@@ -1,0 +1,61 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+
+
+
+.video{
+    display: flex;
+    justify-content: flex-start;
+    height: 70px;
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+    &__img{
+        width: 120px;
+        height: 100%;
+        border-radius: 4px;
+    }
+    &__description{
+        width: 50%;
+        text-align: left;
+        margin-left: 16px;
+    }
+    &__title{
+        margin: 0px 0px 1rem;
+        @include paragraph;
+        font-weight: bold;
+        line-height: 1rem;
+        width: 100%;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;   
+    }
+    &__channel{
+        margin: 0px;
+        @include paragraph;
+    }
+    
+    @include tablet{
+        &__description{
+            width: 29%;
+        }
+        &__title{
+            font-size: 1rem;
+            padding-top: 8px;
+            margin-bottom: 0.6rem;
+        }
+        &__channel{
+            font-size: 0.9rem;
+        }
+    }
+
+    @include desktop{
+        &__description{
+            width: 45%;
+        }
+        &__title{
+            font-size: 0.875rem;
+        }
+    }
+}

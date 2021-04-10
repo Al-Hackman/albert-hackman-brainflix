@@ -1,0 +1,22 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+
+
+.details-video-wrap{
+
+    @include desktop{
+        margin: 0px 11.25rem;
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+.details-section{
+    @include desktop{
+        border-right: 2px solid $text-field-border;
+    }
+
+    @include desktop-1440{
+        width: 86%;
+    }
+}
