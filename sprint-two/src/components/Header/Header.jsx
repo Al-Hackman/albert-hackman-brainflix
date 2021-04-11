@@ -9,7 +9,7 @@ import './header.scss';
 function Header() {
     return (
         <nav className="navbar">
-            <img src={logo} className="navbar__logo" alt="BrainFlix Logo" />
+            <Link to="/" className="navbar__logo"> <img src={logo} className="navbar__logo-img" alt="BrainFlix Logo" /> </Link>
             <div className="navbar__search-wrap">
                 <img className="navbar__search-icon" src={search} alt="Search Icon"/>
                 <input type="text" className="navbar__search" placeholder="Search"/>
