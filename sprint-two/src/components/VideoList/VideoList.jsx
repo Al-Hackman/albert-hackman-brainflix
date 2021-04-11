@@ -26,7 +26,7 @@ function VideoList (props){
    
         return (
             <div className="videos">
-                <p className="videos__title">NEXT VIDEO</p>
+                <h4 className="videos__title">NEXT VIDEO</h4>
                 {props.videos.map(video => <Link to={`/videos/${video.id}`} key={video.id} className="video__link"><div className="video" >
                     <img className="video__img" src={video.image} alt={video.title}/>
                     <div className="video__description">

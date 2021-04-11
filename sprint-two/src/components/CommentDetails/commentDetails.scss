@@ -14,8 +14,9 @@
     &__comment-heading{
         @include sub-header;
         color: $text-label;
-        margin: 2rem 0px 0.3rem 4rem;
-        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 4rem;
     }
     &__add-comment-wrap{
         display: flex;
@@ -132,6 +133,7 @@
         }
         &__comment-heading{
             margin: 1rem 0px 0px 4rem;
+            
         }
         &__comment-wrap{
             margin-top: 1rem;

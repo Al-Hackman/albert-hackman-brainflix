@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import './styles/global.scss';
 import VideoMain from './components/VideoMain/VideoMain';
 import VideoList from './components/VideoList/VideoList'
+import VideoUpload from './components/VideoUpload/VideoUpload'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" exact>
             <VideoMain />
         </Route>
+        <Route path="/upload" component={VideoUpload}/>
         <Route path="/videos/:id"
             render={(routerProps) => <VideoMain  {...routerProps}/>}/>
           
