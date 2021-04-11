@@ -84,9 +84,11 @@
         outline: none;
     }
     &__button-cancel{
-        text-decoration: none;
-        font-weight: 500;
+        font-weight: 600;
         color: $cta-text-link-two;
+        border: none;
+        font-size: 1rem;
+        background-color:$secondary-background;
     }
 
     @include tablet{

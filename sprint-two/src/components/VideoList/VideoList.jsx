@@ -1,28 +1,8 @@
-import React, { Component } from 'react';
-import axios from "axios";
 import {Link} from "react-router-dom";
-import './videoList.scss'
+import './videoList.scss';
 
 
 function VideoList (props){
-//     state = {
-//     videos: [],
-//   }
-
-//   componentDidMount() {
-//     const URL = "https://project-2-api.herokuapp.com";
-//     const GETT = "/videos";
-//     const API_KEY= "?api_key=0fadae90-1377-4238-a02e-c25030ac914b";
-//     axios.get(`${URL}${GETT}${API_KEY}`)
-//     .then(res => {
-//         // console.log('video list',res.data.shift())
-//         this.setState({videos: res.data})
-//       })
-//     .catch(err=>{
-//       console.log('video list err',err);
-//       })
-//   }
-
    
         return (
             <div className="videos">
@@ -39,5 +19,5 @@ function VideoList (props){
 }
 
 
-export default VideoList
+export default VideoList;
 

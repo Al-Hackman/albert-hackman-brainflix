@@ -16,7 +16,7 @@ function Header() {
             </div>
             <div className="navbar__wrap">    
                 <Link to="/upload" className="navbar__upload" ><img className="navbar__upload-icon" src={upload} alt="Upload Icon"/> UPLOAD</Link>
-                <img src={img} className="navbar__image" alt="User-Image" />
+                <img src={img} className="navbar__image" alt="Avatar" />
             </div>
         </nav>
     )

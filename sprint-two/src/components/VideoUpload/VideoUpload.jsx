@@ -11,6 +11,11 @@ function VideoUpload(props) {
         return  props.history.push("/");
     }
 
+    // let cancelSubmit = (e) => {
+    //             e.preventDefault();
+    //             e.target.reset();
+    //             }
+
     return (
         <section className="upload">
             <h1 className="upload__title">Upload Video</h1>
@@ -28,8 +33,8 @@ function VideoUpload(props) {
             </div>
             <div className="upload__button-wrap">
                 <button className="upload__button-publish" onClick={handleSubmit}>PUBLISH</button>
-                <a className="upload__button-cancel" href="#">CANCEL</a>
-                {/* <button className="upload__button-cancel">CANCEL</button> */}
+                {/* <a className="upload__button-cancel" href="#" >CANCEL</a> */}
+                <button className="upload__button-cancel">CANCEL</button>
             </div>
         </section>
     )
