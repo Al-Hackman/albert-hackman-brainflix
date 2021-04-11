@@ -36,8 +36,4 @@ function VideoUpload(props) {
 }
 
 
-
-
-
-
-export default VideoUpload
+export default VideoUpload;

@@ -14,7 +14,8 @@ class VideoMain extends Component {
     state={
         videoID: "",
         selectedVideo: [], 
-        videos: []
+        videos: [],
+        firstVideoID: ""
     }
              
     changeVideo = (id)=>{
@@ -39,6 +40,7 @@ class VideoMain extends Component {
         axios.get(`${url}${endPoint}${apiKey}`)
         .then(res => {
             const firstVideoID = res.data[0].id;
+            this.setState({firstVideoID: firstVideoID})
             const filteredVideos = res.data.filter(vid=>vid.id !== res.data[0].id);
             console.log('video id',firstVideoID);
             console.log('videos',filteredVideos);
@@ -61,10 +63,11 @@ class VideoMain extends Component {
     componentDidUpdate(){
         console.log('updated')
         console.log('params')
+        console.log('state videoID', this.state.videoID)
         //show them the error when we click on home do a console.log in the did mount and did update to show what is happening
-        const selectedID = this.props != null && this.props.match != null && this.props.match.params != null && this.props.match.params.id !== "" ? this.props.match.params.id : this.state.videoID;
-        
-        if(selectedID !== this.state.videoID){
+        const selectedID = this.props != null && this.props.match != null && this.props.match.params != null && this.props.match.params.id !== "" ? this.props.match.params.id : this.state.firstVideoID;
+
+        if( selectedID !== this.state.videoID){
             this.changeVideo(selectedID);
             window.scrollTo(0, 0);
         }
@@ -75,18 +78,11 @@ class VideoMain extends Component {
         console.log('selectedVideo', this.state.selectedVideo)
             if (this.state.selectedVideo.length <= 0) {
                 return (
-                        <div
-                        style={{
-                            width: "100%",
-                            height: "100%",
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center",
-                        }}>
-                        <h2>Loading...</h2>
+                        <div className="initial-load">
+                        <h2 className="initial-load__message">Loading...</h2>
                         </div>
                     );
-                    }
+                }
        
         return (
             <>
