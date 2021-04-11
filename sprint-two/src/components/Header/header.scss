@@ -48,16 +48,17 @@
         margin-right: 1rem;
         border-radius: 4px;
         font-size: 1rem;
-        padding: 0px;
         border: 0px;
         background-color: $cta-text-link-two;
         color: $secondary-background;
         outline: none;
+        text-decoration: none;
+        padding: 1rem 0px;
     }
     &__upload:hover{
         background-color:$cta-hover-one;
     }
-
+    
     @include tablet{
         box-sizing: border-box;
         display: flex;

@@ -2,7 +2,15 @@ import React from 'react';
 import img from '../../assets/images/Upload-video-preview.jpg'
 import './videoUpload.scss'
 
-function VideoUpload() {
+function VideoUpload(props) {
+
+    
+    let handleSubmit = (e) => {
+                e.preventDefault();
+                alert("Video has been Uploaded successfully")
+        return  props.history.push("/");
+    }
+
     return (
         <section className="upload">
             <h1 className="upload__title">Upload Video</h1>
@@ -19,12 +27,17 @@ function VideoUpload() {
                 </form>
             </div>
             <div className="upload__button-wrap">
-                <button className="upload__button-publish">PUBLISH</button>
+                <button className="upload__button-publish" onClick={handleSubmit}>PUBLISH</button>
                 <a className="upload__button-cancel" href="#">CANCEL</a>
                 {/* <button className="upload__button-cancel">CANCEL</button> */}
             </div>
         </section>
     )
 }
+
+
+
+
+
 
 export default VideoUpload

@@ -15,8 +15,8 @@ function Header() {
                 <input type="text" className="navbar__search" placeholder="Search"/>
             </div>
             <div className="navbar__wrap">    
-                <button className="navbar__upload" ><img className="navbar__upload-icon" src={upload} alt="Upload Icon"/> UPLOAD</button>
-                <img src={img} className="navbar__image" alt="User" />
+                <Link to="/upload" className="navbar__upload" ><img className="navbar__upload-icon" src={upload} alt="Upload Icon"/> UPLOAD</Link>
+                <img src={img} className="navbar__image" alt="User-Image" />
             </div>
         </nav>
     )

@@ -15,7 +15,8 @@ function App() {
         <Route path="/" exact>
             <VideoMain />
         </Route>
-        <Route path="/upload" component={VideoUpload}/>
+        <Route path="/upload" 
+            render={(routerProps) => <VideoUpload {...routerProps}/>}/> 
         <Route path="/videos/:id"
             render={(routerProps) => <VideoMain  {...routerProps}/>}/>
           
