@@ -13,7 +13,8 @@ function VideoUpload(props) {
 
     // let cancelSubmit = (e) => {
     //             e.preventDefault();
-    //             e.target.reset();
+    //             alert("You have cancelled this upload")
+    //   return    e.target.reset();
     //             }
 
     return (
@@ -34,7 +35,7 @@ function VideoUpload(props) {
             <div className="upload__button-wrap">
                 <button className="upload__button-publish" onClick={handleSubmit}>PUBLISH</button>
                 {/* <a className="upload__button-cancel" href="#" >CANCEL</a> */}
-                <button className="upload__button-cancel">CANCEL</button>
+                <button className="upload__button-cancel" >CANCEL</button>
             </div>
         </section>
     )

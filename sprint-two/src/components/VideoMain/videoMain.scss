@@ -4,11 +4,11 @@
 
 
 .loading{
-    width: "100%";
-    height: "100%";
-    display: "flex";
-    justify-content: "center";
-    align-items: "center";
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .details-section{
@@ -29,29 +29,3 @@
         }
     }
 }
-
-// .details-section__wrap{
-//     @include desktop{
-//         border-right: 2px solid $text-field-border;
-//     }
-
-//     @include desktop-1440{
-//         width: 86%;
-//     }
-// }
-
-// .videos{
-//     margin: 2.5rem 1rem 0px;
-//     &__title{
-//         @include sub-header;
-//         color: $text-label;
-//         margin: 2.5rem 0px;
-//         text-align: left;
-//     }
-//     @include tablet{
-//         margin: 2.5rem 1.5rem 0px;
-//     }
-//     @include desktop{
-//         margin: 0px 0px 0px 1rem;
-//     }
-// }

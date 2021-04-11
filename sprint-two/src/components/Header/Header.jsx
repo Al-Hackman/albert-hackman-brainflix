@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {Link} from 'react-router-dom';
 import logo from '../../assets/logo/Logo-brainflix.svg';
 import search from '../../assets/icons/Icon-search.svg';

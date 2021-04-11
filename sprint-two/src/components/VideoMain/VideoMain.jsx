@@ -6,9 +6,11 @@ import './videoMain.scss';
 import axios from "axios";
 import CommentDetails from '../CommentDetails/CommentDetails';
 
-        const url = "https://project-2-api.herokuapp.com";
-        const endPoint = "/videos";
-        const apiKey= "?api_key=0fadae90-1377-4238-a02e-c25030ac914b";
+
+const url = "https://project-2-api.herokuapp.com";
+const endPoint = "/videos";
+const apiKey= "?api_key=0fadae90-1377-4238-a02e-c25030ac914b";
+
 
 class VideoMain extends Component {
     state={
@@ -76,13 +78,13 @@ class VideoMain extends Component {
 
     render() {
         console.log('selectedVideo', this.state.selectedVideo)
-            if (this.state.selectedVideo.length <= 0) {
-                return (
-                        <div className="initial-load">
-                        <h2 className="initial-load__message">Loading...</h2>
-                        </div>
-                    );
-                }
+        if (this.state.selectedVideo.length <= 0) {
+            return (
+                    <div className="initial-load">
+                    <h2 className="initial-load__message">Loading...</h2>
+                    </div>
+                );
+            }
        
         return (
             <>
