@@ -6,6 +6,9 @@ import upload from '../../assets/icons/Icon-upload.svg';
 import img from '../../assets/images/Mohan-muruge.jpg';
 import './header.scss';
 
+
+//This is the nav bar of the whole application
+
 function Header() {
     return (
         <nav className="navbar">

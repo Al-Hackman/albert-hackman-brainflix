@@ -1,6 +1,8 @@
 import React from 'react'
 import "./hero.scss"
 
+//This takes the props and populate the hero-image/video
+
 function Hero(props) {
     return (
             <div className="hero">

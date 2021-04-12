@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import './videoList.scss';
 
+//Receives the props and populate the videos 
 
 function VideoList (props){
    

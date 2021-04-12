@@ -2,6 +2,9 @@ import React from 'react';
 import img from '../../assets/images/Mohan-muruge.jpg';
 import './commentDetails.scss';
 
+
+//This receives the props and populate the comments on individual video and also posts comments
+
 function CommentDetails(props) {
    
    
@@ -30,4 +33,4 @@ function CommentDetails(props) {
     )
 }
 
-export default CommentDetails
+export default CommentDetails;

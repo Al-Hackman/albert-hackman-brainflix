@@ -21,10 +21,8 @@ class VideoMain extends Component {
     }
              
     changeVideo = (id)=>{
-        console.log('this id', id)
         axios.get(`${url}${endPoint}/${id}${apiKey}`)
         .then(res=>{
-            console.log(res.data)
             this.setState({
             videoID: res.data.id,
             selectedVideo: res.data
@@ -36,19 +34,13 @@ class VideoMain extends Component {
     }
 
     getAllVideos = ()=>{
-        // const URL = "https://project-2-api.herokuapp.com";
-        // const GETT = "/videos";
-        // const API_KEY= "?api_key=0fadae90-1377-4238-a02e-c25030ac914b";
         axios.get(`${url}${endPoint}${apiKey}`)
         .then(res => {
             const firstVideoID = res.data[0].id;
             this.setState({firstVideoID: firstVideoID})
             const filteredVideos = res.data.filter(vid=>vid.id !== res.data[0].id);
-            console.log('video id',firstVideoID);
-            console.log('videos',filteredVideos);
             this.setState({videoID: firstVideoID});
             this.setState({videos: filteredVideos});
-            console.log('seleted video id', this.state.videoID);
             this.changeVideo(this.state.videoID);
         })
         .catch(err=>{
@@ -57,18 +49,11 @@ class VideoMain extends Component {
     }
 
     componentDidMount() {
-        this.getAllVideos();
-        console.log('mounted')
-        
+        this.getAllVideos();        
     }
 
     componentDidUpdate(){
-        console.log('updated')
-        console.log('params')
-        console.log('state videoID', this.state.videoID)
-        //show them the error when we click on home do a console.log in the did mount and did update to show what is happening
         const selectedID = this.props != null && this.props.match != null && this.props.match.params != null && this.props.match.params.id !== "" ? this.props.match.params.id : this.state.firstVideoID;
-
         if( selectedID !== this.state.videoID){
             this.changeVideo(selectedID);
             window.scrollTo(0, 0);
@@ -77,7 +62,6 @@ class VideoMain extends Component {
 
 
     render() {
-        console.log('selectedVideo', this.state.selectedVideo)
         if (this.state.selectedVideo.length <= 0) {
             return (
                     <div className="initial-load">

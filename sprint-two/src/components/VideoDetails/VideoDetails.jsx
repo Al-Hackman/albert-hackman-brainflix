@@ -3,7 +3,7 @@ import views from '../../assets/icons/Icon-views.svg';
 import likes from '../../assets/icons/Icon-likes.svg';
 import './videoDetails.scss';
 
-
+//Receives the props and populate the title, date, likes, views and description of a particular video
 function VideoDetails(props) {
                   
         return (
