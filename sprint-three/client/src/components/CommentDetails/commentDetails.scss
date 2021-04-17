@@ -1,0 +1,149 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+
+
+
+.details{
+    margin: 0px 1rem;
+    
+    &__comment{
+        @include sub-header;
+        text-align: left;
+        margin: 2.5rem 0px 2rem;
+    }
+    &__comment-heading{
+        @include sub-header;
+        color: $text-label;
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 4rem;
+    }
+    &__add-comment-wrap{
+        display: flex;
+        justify-content: flex-start;
+        padding-bottom: 1.5rem;
+        border-bottom:2px solid $text-field-border;
+    }
+    &__add-comment-img{
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+    }
+    &__add-comment{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        width: 100%;
+        margin-left: 1rem;
+    }
+    &__input{
+        box-sizing: border-box;
+        width: 100%;
+        height: 20vh;
+        border-radius: 4px;
+        border: 1px solid $text-field-border;
+        padding: 1rem 0px 0px 1rem;
+    }
+    &__input:active{
+        border: 2px solid $cta-text-link-two;
+        outline: none;
+    }
+    &__button{
+        width: 100%;
+        height: 3rem;
+        margin: 1rem 0px 0px;
+        background-color: $cta-text-link-two;
+        color: $secondary-background;
+        border-radius: 4px;
+        border: none;
+        font-size: 1rem;
+        padding: 0px;
+        outline: none;
+    }
+    &__comment-wrap{
+        border-bottom: 2px solid $text-field-border;
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 1.8rem;
+    }
+    &__comment-img{
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background-color: $text-field-border;
+    }
+    &__saved-comment{
+        box-sizing: border-box;
+        width: 80%;
+        @include paragraph;
+        text-align: left;
+        margin-left: 1rem;
+    }
+    &__name-date-wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__comment-name{
+        font-weight: bold; 
+    }
+    &__comment-date{
+        color: $text-label;
+    }
+       &__info{
+        text-align: left;
+    }
+
+    @include tablet{
+        margin: 0px 1.5rem;
+
+        &__add-comment{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+        &__input{
+            width: 440px;
+            height: 48px;
+            margin-right: 1rem;
+        }
+        &__button{
+            margin: 0px;
+            width: 160px;
+        }
+        &__saved-comment{
+            width: 624px;
+        }
+        &__name-date-wrap{
+            justify-content: flex-start;
+        }
+        &__comment-name{
+            margin-right: 1rem;
+        }
+    }
+
+    @include desktop{
+        margin: 2rem 0px;
+
+        &__input{
+            width: 67%;
+        }
+        &__description{
+            line-height: 1.375rem;
+            margin: 2rem 0px 3rem;
+        }
+        &__comment-heading{
+            margin: 1rem 0px 0px 4rem;
+            
+        }
+        &__comment-wrap{
+            margin-top: 1rem;
+        }
+    }
+
+        @include desktop-1440{
+            &__input{
+                width: 67.3%;
+            }
+        }
+
+}

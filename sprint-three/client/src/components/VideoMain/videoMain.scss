@@ -1,0 +1,31 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+
+
+
+.loading{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-section{
+
+    @include desktop{
+        margin: 0px 11.25rem;
+        display: flex;
+        justify-content: flex-start;
+
+        &__wrap{
+            border-right: 2px solid $text-field-border;
+        }
+    }
+
+    @include desktop-1440{
+        &__wrap{
+            width: 86%;
+        }
+    }
+}

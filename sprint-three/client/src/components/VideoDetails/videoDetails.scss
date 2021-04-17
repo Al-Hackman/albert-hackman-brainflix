@@ -1,0 +1,86 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+
+.details{
+    margin: 2rem 1rem 2.5rem;
+
+    &__title{
+        text-align: left;
+        @include lower-header;
+    }
+    &__wrap{
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid $text-field-border;
+    }
+    &__channel-date{
+        text-align: left;
+        margin: 1rem 0px 2rem;
+    }
+    &__channel{
+        font-weight: bold;
+        margin-right: 0.5rem;
+    }
+    &__date{
+        color: $text-label;
+    }
+    &__views-likes{
+        display: flex;
+        justify-content:flex-start;
+        
+    }
+    &__views{
+        margin-right: 3rem;
+        padding-top: 4px;
+    }
+    &__likes{
+        padding-top: 4px;
+    }
+    &__icon{
+        margin-right: 0.5rem;
+    }
+    &__description{
+        margin: 1.5rem 0px 2.5rem;
+        @include paragraph;
+        text-align: left;
+    }
+   
+
+    @include tablet{
+        margin: 3rem 1.5rem 2.5rem;
+
+        &__title{
+            @include header;
+            margin:2rem 0px 1.5rem;
+        }
+        &__wrap{
+            display: flex;
+            justify-content: space-between;
+        }
+        &__channel-date{
+            margin: 0px;
+        }
+        &__views{
+            margin-right: 1.5rem;
+        }
+        &__description{
+            margin: 2.5rem 0px 4rem;
+            font-size: 0.9rem;
+            line-height: 1.5rem;
+            width: 75%;
+        }
+    }
+
+    @include desktop{
+        margin: 2rem 0px;
+
+        &__views-likes{
+            margin-right: 2rem;
+        }
+    }
+
+        @include desktop-1440{
+            &__input{
+                width: 67.3%;
+            }
+        }
+}
