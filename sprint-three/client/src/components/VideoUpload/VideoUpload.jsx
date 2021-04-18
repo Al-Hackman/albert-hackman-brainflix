@@ -65,8 +65,8 @@ function VideoUpload(props) {
                 
                 </div>
                 <div className="upload__button-wrap">
-                    <button className="upload__button-publish" type="submit">PUBLISH</button>
-                    <button className="upload__button-cancel" >CANCEL</button>
+                    <button className="upload__button-publish" type="submit" value="Submit">PUBLISH</button>
+                    <button className="upload__button-cancel" type="reset" value="Reset">CANCEL</button>
                 </div>
             </form>
         </section>
