@@ -7,6 +7,8 @@ import axios from "axios";
 const expressUrl = "http://localhost:8080";
 
 function VideoUpload(props) {
+    
+    document.title = "Upload Page";
     // console.log(props)
     //This function takes the user back to the home page with the default video
     //This also gives the user a feedback of a successfull upload
