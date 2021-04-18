@@ -1,5 +1,5 @@
-@use '../../partials/mixins' as *;
-@use '../../partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
 
 
 .upload{
@@ -24,7 +24,7 @@
         width: 100%;
         border-radius: 4px;
     }
-    &__video-label{
+    &__video-title-label{
         color: $text-label;
         padding-bottom: 0.25rem;
         margin-top: 2rem;
@@ -63,6 +63,23 @@
     &__description:active{
         border: 2px solid $cta-text-link-two;
         outline: none;
+    }
+    &__video{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;  
+    }
+    &__video:active{
+        border: 2px solid $cta-text-link-two;
+        outline: none;
+    }
+    &__video::-webkit-file-upload-button{
+        background: $text-field-background;
+        color: $text-label;
+        padding: 1em;
+        border: 1px solid $text-field-border;
+        border-radius: 4px;
+        font-size: 1rem;
     }
     &__button-wrap{
         margin: 2rem 1rem;
@@ -109,7 +126,7 @@
             justify-content: flex-start;
             width: 47.8%
         }
-        &__video-label{
+        &__video-title-label{
             margin-top: 2.5rem;
         }
         &__button-wrap{
@@ -148,7 +165,7 @@
             width: 63%;
             margin-left: 1.5rem;
         }
-        &__video-label{
+        &__video-title-label{
             box-sizing: border-box;
             margin: 0px;
         }

@@ -45,28 +45,29 @@ function VideoUpload(props) {
         <section className="upload">
             <h1 className="upload__title">Upload Video</h1>
             <form onSubmit={handleSubmit} encType="multipart/form-data">
-            <div className="upload__main-wrap">
-                <div className="upload__video-wrap">
-                    <label className="upload__thumbnail">VIDEO THUMBNAIL</label>
-                    <img src={img} className="upload__video-img" alt="Video Thumbnail"/>
-                </div>
-                
+                <div className="upload__main-wrap">
+                    <div className="upload__video-wrap">
+                        <label className="upload__thumbnail">VIDEO THUMBNAIL</label>
+                        <img src={img} className="upload__video-img" alt="Video Thumbnail"/>
+                    </div> 
                     <div className="upload__form-wrap">
-                    <label className="upload__video-label">TITLE YOUR VIDEO</label>
-                    <input name="title" className="upload__video-title" type="text" placeholder="Add a title to your video" />
-                    <label className="upload__description-label">ADD A VIDEO DESCRIPTION</label>
-                    <textarea name="description" className="upload__description" placeholder="Add a description of your video"></textarea>
-                    <label className="upload__video-label" >CHOOSE A VIDEO</label>
-                    <input name="video" className="upload__video-title" type="file" placeholder= "select a video" accept="video/mp4,video/x-m4v,video/*"/>
+                        <label className="upload__video-title-label">TITLE YOUR VIDEO</label>
+                        <input name="title" className="upload__video-title" type="text" placeholder="Add a title to your video" />
+                        <label className="upload__description-label">ADD A VIDEO DESCRIPTION</label>
+                        <textarea name="description" className="upload__description" placeholder="Add a description of your video"></textarea>
+                        <label className="upload__description-label">ADD CHANNEL</label>
+                        <input name="title" className="upload__video-title" type="text" placeholder="Add a channel to your video" />
+                        <label className="upload__description-label" >ADD VIDEO</label>
+                        <input name="video" className="upload__video" type="file" placeholder="select a video" accept="video/mp4,video/x-m4v,video/*"/>
                     </div>
-                    
-               
-            </div>
-            <div className="upload__button-wrap">
-                <button className="upload__button-publish" type="submit">PUBLISH</button>
-                <button className="upload__button-cancel" >CANCEL</button>
-            </div>
-             </form>
+                        
+                
+                </div>
+                <div className="upload__button-wrap">
+                    <button className="upload__button-publish" type="submit">PUBLISH</button>
+                    <button className="upload__button-cancel" >CANCEL</button>
+                </div>
+            </form>
         </section>
     )
 }
