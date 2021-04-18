@@ -64,8 +64,8 @@ class VideoMain extends Component {
     //This function is always called when there is an update on the website.
     //Also takes user to the top of the page after the update is made 
     componentDidUpdate(){
-        const selectedID = this.props != null && this.props.match != null && this.props.match.params != null && this.props.match.params.id !== "" ? this.props.match.params.id : this.state.firstVideoID;
-        // const selectedID = this.props.match.params.id !== "" ? this.props.match.params.id : this.state.firstVideoID;
+        // const selectedID = this.props != null && this.props.match != null && this.props.match.params != null && this.props.match.params.id !== "" ? this.props.match.params.id : this.state.firstVideoID;
+        const selectedID = this.props.match != null && this.props.match.params.id !== "" ? this.props.match.params.id : this.state.firstVideoID;
         if( selectedID !== this.state.videoID){
             this.changeVideo(selectedID);
             window.scrollTo(0, 0);

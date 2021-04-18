@@ -26,6 +26,7 @@ function VideoUpload(props) {
                     title: e.target.title.value,
                     description: e.target.description.value,
                     video: e.target.video.value,
+                    channel:e.target.channel.value,
                     })
                     .then(function (response) {
                         //handle success
@@ -56,7 +57,7 @@ function VideoUpload(props) {
                         <label className="upload__description-label">ADD A VIDEO DESCRIPTION</label>
                         <textarea name="description" className="upload__description" placeholder="Add a description of your video"></textarea>
                         <label className="upload__description-label">ADD CHANNEL</label>
-                        <input name="title" className="upload__video-title" type="text" placeholder="Add a channel to your video" />
+                        <input name="channel" className="upload__video-title" type="text" placeholder="Add a channel to your video" />
                         <label className="upload__description-label" >ADD VIDEO</label>
                         <input name="video" className="upload__video" type="file" placeholder="select a video" accept="video/mp4,video/x-m4v,video/*"/>
                     </div>

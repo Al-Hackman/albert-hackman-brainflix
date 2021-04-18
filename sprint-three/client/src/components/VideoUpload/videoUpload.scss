@@ -1,5 +1,6 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
 
 
 .upload{
@@ -39,6 +40,7 @@
         border: 1px solid $text-field-border;
         padding: 0.2rem 0px 0px 1rem;
         background-color: $text-field-background;
+        font-family: 'Avenir Next';
     }
     &__video-title:active{
         border: 2px solid $cta-text-link-two;
@@ -59,7 +61,9 @@
         border: 1px solid $text-field-border;
         padding: 1rem 0px 0px 1rem;
         background-color: $text-field-background;
-    }
+        font-family: 'Avenir Next';
+        resize: none;
+      }
     &__description:active{
         border: 2px solid $cta-text-link-two;
         outline: none;
@@ -80,6 +84,7 @@
         border: 1px solid $text-field-border;
         border-radius: 4px;
         font-size: 1rem;
+        font-family: 'Avenir Next';
     }
     &__button-wrap{
         margin: 2rem 1rem;

@@ -54,8 +54,8 @@ router.post("/", (req, res) => {
     videos.push({
         id: uuid.v4(),
         title: title,
-        channel: "req.params.channel",
-        image: req.params.image, //http://localhost:8080/images/Upload-video-preview.jpg
+        channel: channel,
+        image: "http://localhost:8080/images/Upload-video-preview.jpg",
         description: description,
         views: "",
         likes: "",

@@ -6,12 +6,12 @@ import './commentDetails.scss';
 //This receives the props and populate the comments on individual video and also posts comments
 
 function CommentDetails(props) {
-    console.log("comment videos",props.thisVideo)
+    // console.log("comment videos",props.thisVideo.comments)
    
    
     return (
         <section className="details">
-            <p className="details__comment">3 Comments</p>
+            <p className="details__comment">{props.thisVideo.comments.length} Comments</p>
                 <label className="details__comment-heading">JOIN THE CONVERSATION</label>
                 <div className="details__add-comment-wrap">
                     <img src={img} className="details__add-comment-img" alt="Add-Comment User"/>
