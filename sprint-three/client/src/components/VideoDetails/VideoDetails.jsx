@@ -6,6 +6,7 @@ import './videoDetails.scss';
 //Receives the props and populate the title, date, likes, views and description of a particular video
 function VideoDetails(props) {
                   
+    console.log("Details array", props.thisVideo)
         return (
             <div className="details">
                 <h1 className="details__title">{props.thisVideo.title} </h1>

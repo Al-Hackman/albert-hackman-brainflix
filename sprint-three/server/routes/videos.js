@@ -15,7 +15,7 @@ router.get("/", (_req, res) => {
 
 // get video by id
 router.get("/:id",( req, res) => {
-    console.log('req', req)
+    // console.log('req', req)
    const search = videos.find( v => v.id == req.params.id);
   if (search) {
     res.status(201).send(search);
@@ -49,7 +49,7 @@ router.get("/:id",( req, res) => {
 
 
 router.post("/", (req, res) => {
-    console.log('adding video', req.body)
+    // console.log('adding video', req.body)
     const {title, channel, image, description, views, likes, duration, video, timestamp, comments} = req.body;
     videos.push({
         id: uuid.v4(),

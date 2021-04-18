@@ -6,6 +6,7 @@ import './commentDetails.scss';
 //This receives the props and populate the comments on individual video and also posts comments
 
 function CommentDetails(props) {
+    console.log("comment videos",props.thisVideo)
    
    
     return (

@@ -36,6 +36,7 @@ function VideoUpload(props) {
                         console.log(response);
                 });
                 alert("Video has been Uploaded successfully")
+                e.target.reset();
         // return  props.history.push("/");
     }
 
