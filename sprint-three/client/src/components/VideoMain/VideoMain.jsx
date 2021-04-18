@@ -24,10 +24,15 @@ class VideoMain extends Component {
     //This function receives an ID as an argument and set new states to be used to pass as props 
     changeVideo = (id)=>{
         // axios.get(`${url}${endPoint}/${id}${apiKey}`)
-        axios.get(`${expressUrl}${endPoint}/${id}`)
+        axios.get(`${expressUrl}${endPoint}`)
         .then(res=>{
-            console.log("This is the response",res.data)
-            this.setState({selectedVideo: res.data,})
+            // console.log("This is the response",res.data)
+            const newVideo = res.data.find(vid => vid.id === id)
+            const newVideos = res.data.filter(vids => vids.id !== id)
+            this.setState({
+                selectedVideo: newVideo,
+                videos: newVideos,
+            })
         })
         .catch(err=>{
             console.log("Video Mount Error",err);

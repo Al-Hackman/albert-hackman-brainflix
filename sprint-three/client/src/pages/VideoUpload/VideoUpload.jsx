@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../../assets/images/Upload-video-preview.jpg'
+import img from '../../assets/images/Upload-video-preview.jpg';
 import './videoUpload.scss';
 import axios from "axios";
 
@@ -34,10 +34,9 @@ function VideoUpload(props) {
                         //handle success
                         console.log(response);
                     })
-                    .catch(function (response) {
-                        //handle error
-                        console.log(response);
-                });
+                    .catch(err => {
+                    console.log(err);
+                    })
                 alert("Video has been Uploaded successfully")
                 e.target.reset();
         return  props.history.push("/");

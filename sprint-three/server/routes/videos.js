@@ -7,23 +7,23 @@ const path = require("path");
 const multer = require('multer');
 const router = express.Router();
 const fs = require('fs');
-const helpers = require('../helpers');
+// const helpers = require('../helpers');
 
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/public'));
 
-const storage = multer.diskStorage({
-    // console.log('in storage')
-    destination: function(req, file, cb) {
-        console.log('destination', file, cb)
-        cb(null, 'videos/');
-    },
+// const storage = multer.diskStorage({
+//     // console.log('in storage')
+//     destination: function(req, file, cb) {
+//         console.log('destination', file, cb)
+//         cb(null, 'videos/');
+//     },
 
-    // By default, multer removes file extensions so let's add them back
-    filename: function(req, file, cb) {
-        console.log('filename', file, cb)
-        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-    }
-});
+//     // By default, multer removes file extensions so let's add them back
+//     filename: function(req, file, cb) {
+//         console.log('filename', file, cb)
+//         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+//     }
+// });
 
 
 

@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import './styles/global.scss';
 import VideoMain from './components/VideoMain/VideoMain';
-import VideoUpload from './components/VideoUpload/VideoUpload';
+import VideoUpload from './pages/VideoUpload/VideoUpload';
 
 
 function App() {
