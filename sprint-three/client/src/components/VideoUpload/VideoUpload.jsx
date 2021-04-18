@@ -38,7 +38,7 @@ function VideoUpload(props) {
                 });
                 alert("Video has been Uploaded successfully")
                 e.target.reset();
-        // return  props.history.push("/");
+        return  props.history.push("/");
     }
 
     
