@@ -10,6 +10,7 @@ function VideoUpload(props) {
     
     document.title = "Upload Page";
    
+    //This function uploads new video unto the server api
     //This function takes the user back to the home page with the default video
     //This also gives the user a feedback of a successfull upload
         let handleSubmit = (e) => {
