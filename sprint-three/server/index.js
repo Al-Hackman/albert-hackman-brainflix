@@ -1,12 +1,8 @@
 const express = require("express");
 const app = express();
-const videos = require("./data/videos.json");
 const cors = require("cors");
-const uuid = require("uuid");
 const path = require("path");
 const videosRoutes = require('./routes/videos');
-const commentsRoutes = require('./routes/comments');
-
 const sPort = 8080;
 
 
@@ -25,49 +21,6 @@ app.use((req, _res, next) => {
 
 // routes
 app.use('/videos', videosRoutes);
-app.use('/videos', commentsRoutes);
-
-
-// // get all videos
-// app.get("/videos", (_req, res) => {
-//     res.status(200).send(videos);
-// });
-
-// // get video by id
-// app.get("/videos/:id",( req, res) => {
-//     console.log('req', req)
-//    const search = videos.filter( v => v.id == req.params.id);
-//   if (search) {
-//     res.status(200).json(search);
-//   } else {
-//     res.status(400).json({
-//       error: 'Video not found'
-//     });
-//   }
-
-// });
-
-
-// app.post("/video", (req, res) => {
-//     let newVideo = {
-//         id: uuid.v4(),
-//         title: req.params.title,
-//         channel: req.params.channel,
-//         image: req.params.image, //http://localhost:8080/images/Upload-video-preview.jpg
-//         description: req.params.description,
-//         views: "",
-//         likes: "",
-//         duration: "",
-//         video: "https://project-2-api.herokuapp.com/stream",
-//         timestamp: new Date().getTime(),
-//         comments: []
-//     };
-//     videos.push(newVideo);
-//     res.status(201).send(newVideo);
-// });
-
-
-
 
 
 app.listen(sPort, (error) =>
