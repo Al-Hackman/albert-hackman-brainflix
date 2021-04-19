@@ -6,16 +6,13 @@ import './videoMain.scss';
 import axios from "axios";
 import CommentDetails from '../CommentDetails/CommentDetails';
 
-//Global declaration of Variables 
+//Global declaration of the local API url and the endpoint 
 const expressUrl = "http://localhost:8080";
-// const url = "https://project-2-api.herokuapp.com";
 const endPoint = "/videos";
-// const apiKey= "?api_key=0fadae90-1377-4238-a02e-c25030ac914b";
 
 
 class VideoMain extends Component {
     state={
-        // videoID: "",
         selectedVideo: [], 
         videos: [],
         firstVideoID: ""
@@ -23,10 +20,8 @@ class VideoMain extends Component {
      
     //This function receives an ID as an argument and set new states to be used to pass as props 
     changeVideo = (id)=>{
-        // axios.get(`${url}${endPoint}/${id}${apiKey}`)
         axios.get(`${expressUrl}${endPoint}`)
         .then(res=>{
-            // console.log("This is the response",res.data)
             const newVideo = res.data.find(vid => vid.id === id)
             const newVideos = res.data.filter(vids => vids.id !== id)
             this.setState({
@@ -42,14 +37,10 @@ class VideoMain extends Component {
     //This gets the data from the API and sets a new state
     //This also changes the hero video/image with a new video ID
     getAllVideos = ()=>{
-        // axios.get(`${url}${endPoint}${apiKey}`)
         axios.get(`${expressUrl}${endPoint}`)
         .then(res => {
-            console.log("Another response",res.data[0].id)
             const firstVideoID = res.data[0].id;
-            // this.setState({firstVideoID: firstVideoID})
             const filteredVideos = res.data.filter(vid=>vid.id !== res.data[0].id);
-            // this.setState({videoID: firstVideoID});
             this.setState({
                 firstVideoID: firstVideoID,
                 videos: filteredVideos,
@@ -57,7 +48,7 @@ class VideoMain extends Component {
             this.changeVideo(this.state.firstVideoID);
         })
         .catch(err=>{
-        console.log('video List Error',err);
+            console.log('video List Error',err);
         })
     }
 
@@ -70,8 +61,8 @@ class VideoMain extends Component {
     //This function is always called when there is an update on the website.
     //Also takes user to the top of the page after the update is made 
     componentDidUpdate(){
-        const selectedID = this.props != null && this.props.match != null && this.props.match.params != null && this.props.match.params.id !== "" ? this.props.match.params.id : this.state.firstVideoID;
-        // const selectedID = this.props.match.params.id !== "" ? this.props.match.params.id : this.state.firstVideoID;
+        // const selectedID = this.props != null && this.props.match != null && this.props.match.params != null && this.props.match.params.id !== "" ? this.props.match.params.id : this.state.firstVideoID;
+        const selectedID = this.props.match != null &&  this.props.match.params.id !== "" ? this.props.match.params.id : this.state.firstVideoID;
         if( selectedID !== this.state.selectedVideo.id){
             this.changeVideo(selectedID);
             window.scrollTo(0, 0);
@@ -80,7 +71,6 @@ class VideoMain extends Component {
 
 
     render() {
-        console.log("This Video",this.state.selectedVideo);
         //This condition helps print something on the screen for users as the app is retrieving data from API
         if (this.state.selectedVideo.length <= 0) {
             return (

@@ -23,6 +23,7 @@ app.use((req, _res, next) => {
 app.use('/videos', videosRoutes);
 
 
+//declaring the port the app will be running/listening on
 app.listen(sPort, (error) =>
     error ? console.error(error) : console.info("Ready to go!")
 );

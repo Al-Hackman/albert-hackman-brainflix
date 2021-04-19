@@ -9,33 +9,20 @@ const expressUrl = "http://localhost:8080";
 function VideoUpload(props) {
     
     document.title = "Upload Page";
-    // console.log(props)
+   
     //This function takes the user back to the home page with the default video
     //This also gives the user a feedback of a successfull upload
-    let handleSubmit = (e) => {
+        let handleSubmit = (e) => {
                 e.preventDefault();
-
-                // const submitData = new FormData()
-                // submitData.append("title", e.target.title.value)
-                // submitData.append("description", e.target.description.value)
-                // submitData.append("video", e.target.video.value)
-
                 axios
                     .post(`${expressUrl}/videos`,{
-                    // url: expressUrl + "videos",
-                    // data: submitData,
-                    // headers: { "Content-Type": "multipart/form-data" },
-                    title: e.target.title.value,
-                    description: e.target.description.value,
-                    video: e.target.video.value,
-                    channel:e.target.channel.value,
-                    })
-                    .then(function (response) {
-                        //handle success
-                        console.log(response);
+                        title: e.target.title.value,
+                        description: e.target.description.value,
+                        video: e.target.video.value,
+                        channel:e.target.channel.value,
                     })
                     .catch(err => {
-                    console.log(err);
+                        console.log(err);
                     })
                 alert("Video has been Uploaded successfully")
                 e.target.reset();
@@ -61,9 +48,7 @@ function VideoUpload(props) {
                         <input name="channel" className="upload__video-title" type="text" placeholder="Add a channel to your video" />
                         <label className="upload__description-label" >ADD VIDEO</label>
                         <input name="video" className="upload__video" type="file" placeholder="select a video" accept="video/mp4,video/x-m4v,video/*"/>
-                    </div>
-                        
-                
+                    </div>    
                 </div>
                 <div className="upload__button-wrap">
                     <button className="upload__button-publish" type="submit" value="Submit">PUBLISH</button>
