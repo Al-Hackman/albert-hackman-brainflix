@@ -7,6 +7,9 @@ const path = require("path");
 const multer = require('multer');
 const router = express.Router();
 const fs = require('fs');
+const upload = require('express-fileupload');
+
+
 // const helpers = require('../helpers');
 
 // app.use(express.static(__dirname + '/public'));
@@ -95,6 +98,8 @@ router.post("/", (req, res) => {
 
     //     // res.send(`You have uploaded this image: <hr/><img src="${req.file.path}" width="500"><hr /><a href="./">Upload another image</a>`);
     // });
+
+    
 const {title, channel, image, description, views, likes, duration, video, timestamp, comments} = req.body;
     videos.push({
         id: uuid.v4(),
@@ -109,6 +114,7 @@ const {title, channel, image, description, views, likes, duration, video, timest
         timestamp: new Date().getTime(),
         comments: []
     })
+    
     fs.writeFileSync('data/videos.json',JSON.stringify(videos));
     res.json(videos)
     

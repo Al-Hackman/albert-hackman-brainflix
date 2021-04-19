@@ -5,6 +5,9 @@ const cors = require("cors");
 const uuid = require("uuid");
 const path = require("path");
 const videosRoutes = require('./routes/videos');
+const commentsRoutes = require('./routes/comments');
+
+const sPort = 8080;
 
 
 app.use(express.json());
@@ -22,6 +25,7 @@ app.use((req, _res, next) => {
 
 // routes
 app.use('/videos', videosRoutes);
+app.use('/videos', commentsRoutes);
 
 
 // // get all videos
@@ -66,6 +70,6 @@ app.use('/videos', videosRoutes);
 
 
 
-app.listen(8080, (error) =>
+app.listen(sPort, (error) =>
     error ? console.error(error) : console.info("Ready to go!")
 );
